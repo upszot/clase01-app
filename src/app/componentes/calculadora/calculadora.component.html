@@ -1,0 +1,11 @@
+<p>calculadora works!</p>
+<br>
+<h1>Edad 1ra Persona</h1>
+<input type="number" [(ngModel)]="edadUno">
+<h1>Edad 2da Persona</h1>
+<input type="number" [(ngModel)]="edadDos">
+<br>
+<button (click)="calcular()">Calcular</button>
+<button (click)="limpiar()">Limpiar</button>
+<p>Resultado: {{resultado}}</p>
+<p>Promedio: {{promedio}}</p>

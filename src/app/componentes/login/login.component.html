@@ -1,12 +1,6 @@
 <p>login works!</p>
-<h1> hola</h1>
 
-<h1>Bindeo</h1>
-<p>Simple</p>
-{{ejemplo}}
 
-<p>Doble</p>
-<input type="text" [(ngModel)]="ejemplo">
-<p>Prueba {{ejemplo}}</p>
-
-<button (click)="PruebaClick()">Prueba click</button> {{ejemplo2}}
+<input placeholder="Usuario" type="text" name="usuario" [(ngModel)]="user">
+<input placeholder="password" type="password" name="password" [(ngModel)]="password">
+<button (click)="login()">Login</button>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,17 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-    public ejemplo = 'Hola Mundo';
-    public ejemplo2 = 'Hola Mundo';
+    public user = '';
+    public password = '';
 
-  constructor() { }
+    public user_valido = 'pepe';
+    public password_valido = '***';
+
+  constructor( private rutas:Router) { }
 
   ngOnInit(){
-    
+
   }
 
-  PruebaClick() {
-    this.ejemplo2 = 'Ejecutamos el evento!!!';
+
+  login(){
+    if(this.user==this.user_valido && this.password==this.password_valido){
+      this.rutas.navigate(['bienvenido']);
+    }else{
+      this.rutas.navigate(['error']);
+    }
   }
+
 
 }
